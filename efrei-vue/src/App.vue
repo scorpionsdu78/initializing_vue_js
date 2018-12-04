@@ -1,20 +1,30 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<<template>
+  <div>  
+    <h1>Clicked {{number}} tines</h1>
+    <button @click="iAmClicked()">Click me!</button>
   </div>
 </template>
-
+ 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    export default {
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+        
+
+        data() {
+            return {
+              title: 'cliked 0 time',
+              number: 0
+              }
+        },
+        methods: {
+            iAmClicked() {
+                
+                this.number = this.number + 1;
+            }
+        }
+    };
 </script>
+
 
 <style>
 #app {
